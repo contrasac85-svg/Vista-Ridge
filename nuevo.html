@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía | Vista Ridge Renovations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+        }
+        .brand-green { color: #97b355; }
+        .brand-blue { color: #024497; }
+        .brand-gold { color: #ffd98d; }
+        .bg-brand-green { background-color: #97b355; }
+        .bg-brand-blue { background-color: #024497; }
+        .bg-brand-gold { background-color: #ffd98d; }
+        .border-brand-blue { border-color: #024497; }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .flow-step {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border: 2px solid;
+            min-height: 100px;
+        }
+        .flow-arrow {
+            font-size: 2.5rem;
+            color: #024497;
+            margin: 0.5rem 0;
+            transform: rotate(90deg);
+        }
+        @media (min-width: 768px) {
+            .flow-arrow {
+                transform: rotate(0deg);
+                margin: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="bg-white shadow-md p-4 text-center">
+        <img src="https://storage.googleapis.com/gemini-prod-us-west1-d000c84b-017/1e7698b3-2e25-4e8a-babf-cad80ebf067f" alt="Vista Ridge Renovations Logo" class="mx-auto h-24 w-auto">
+        <h1 class="text-3xl md:text-5xl font-bold brand-blue mt-4">Su Tranquilidad, Restaurada.</h1>
+        <p class="text-lg text-gray-600 mt-2">Cómo convertimos el caos del granizo en un proceso simple y sin estrés.</p>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div class="md:col-span-2 lg:col-span-3 bg-white rounded-lg shadow-lg p-6 flex flex-col md:flex-row items-center justify-around">
+                <div class="text-center md:text-left">
+                    <p class="text-2xl text-gray-700">Pérdidas anuales por granizo en EE. UU.</p>
+                    <p class="text-7xl font-black brand-blue my-2">$15+ Billones</p>
+                    <p class="text-gray-500">El granizo es una de las catástrofes naturales más costosas, afectando a miles de propietarios cada año.</p>
+                </div>
+                <div class="w-full md:w-1/2 mt-6 md:mt-0">
+                    <div class="chart-container" style="height: 300px; max-height: 300px;">
+                        <canvas id="topStatesChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-3 bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-3xl font-bold brand-blue text-center mb-2">El Proceso Tradicional: Un Camino Lleno de Estrés</h2>
+                <p class="text-gray-600 text-center mb-6 max-w-3xl mx-auto">Para un propietario, lidiar con los daños por granizo puede ser un laberinto de llamadas, negociaciones y frustración. Este es el camino que muchos enfrentan solos.</p>
+                <div class="flex flex-col md:flex-row justify-center items-center">
+                    <div class="flow-step border-red-500 bg-red-50 text-red-700 w-full md:w-1/4">Daño por Granizo<br/>(Incertidumbre)</div>
+                    <div class="flow-arrow text-red-500">&#10140;</div>
+                    <div class="flow-step border-red-500 bg-red-50 text-red-700 w-full md:w-1/4">Llamadas al Seguro<br/>(Largas esperas)</div>
+                    <div class="flow-arrow text-red-500">&#10140;</div>
+                    <div class="flow-step border-red-500 bg-red-50 text-red-700 w-full md:w-1/4">Negociar con Ajustadores<br/>(Ofertas bajas)</div>
+                    <div class="flow-arrow text-red-500">&#10140;</div>
+                    <div class="flow-step border-red-500 bg-red-50 text-red-700 w-full md:w-1/4">Buscar Contratistas<br/>(Dudas y riesgos)</div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-3 bg-brand-blue text-white rounded-lg shadow-lg p-6">
+                <h2 class="text-3xl font-bold text-center mb-2 text-white">La Solución Vista Ridge: Un Proceso Simplificado</h2>
+                <p class="text-center mb-6 max-w-3xl mx-auto text-gray-200">Nosotros tomamos el control para que usted no tenga que hacerlo. Gestionamos todo el ciclo, convirtiendo la complejidad en una experiencia fluida y transparente.</p>
+                <div class="flex flex-col md:flex-row justify-center items-center">
+                    <div class="flow-step border-brand-gold bg-white/10 w-full md:w-1/4"><strong>1. Contacto Inicial</strong><br/>Inspección gratuita</div>
+                    <div class="flow-arrow text-brand-gold">&#10140;</div>
+                    <div class="flow-step border-brand-gold bg-white/10 w-full md:w-1/4"><strong>2. Gestión del Reclamo</strong><br/>Nosotros negociamos</div>
+                    <div class="flow-arrow text-brand-gold">&#10140;</div>
+                    <div class="flow-step border-brand-gold bg-white/10 w-full md:w-1/4"><strong>3. Aprobación y Fondos</strong><br/>Aseguramos lo justo</div>
+                    <div class="flow-arrow text-brand-gold">&#10140;</div>
+                    <div class="flow-step border-brand-gold bg-white/10 w-full md:w-1/4"><strong>4. Reparación Experta</strong><br/>Calidad garantizada</div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                 <div class="text-6xl mb-4">🤝</div>
+                <h3 class="text-2xl font-bold brand-blue mb-2">Integridad</h3>
+                <p class="text-gray-600">Representamos únicamente sus intereses. Somos su voz, no la de la compañía de seguros. Nuestra lealtad es 100% con usted, el propietario.</p>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="text-6xl mb-4">🔍</div>
+                <h3 class="text-2xl font-bold brand-blue mb-2">Transparencia</h3>
+                <p class="text-gray-600">Mantenemos una comunicación abierta y honesta en cada etapa. Sabrá exactamente qué está sucediendo con su reclamo y su reparación, sin sorpresas.</p>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="text-6xl mb-4">🛡️</div>
+                <h3 class="text-2xl font-bold brand-blue mb-2">Compromiso</h3>
+                <p class="text-gray-600">Nuestra meta es restaurar su propiedad a su estado original o mejor. Utilizamos materiales de alta calidad y mano de obra experta para un resultado duradero.</p>
+            </div>
+            
+             <div class="md:col-span-2 lg:col-span-3 bg-white rounded-lg shadow-lg p-6 flex flex-col md:flex-row items-center">
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-3xl font-bold brand-blue mb-4">Nuestra Propuesta de Valor</h2>
+                    <p class="text-gray-600 mb-4">Nuestro modelo de negocio está diseñado para ahorrarle tiempo, dinero y estrés. Mientras otros lo dejan navegando solo el complejo sistema de seguros, nosotros nos convertimos en su socio de principio a fin, maximizando su reclamo y asegurando una reparación impecable.</p>
+                     <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li><strong>Representación Exclusiva:</strong> Luchamos por sus derechos.</li>
+                        <li><strong>Gestión Integral:</strong> Nos encargamos de todo el papeleo.</li>
+                        <li><strong>Reparación Profesional:</strong> Somos contratistas licenciados y asegurados.</li>
+                    </ul>
+                </div>
+                 <div class="w-full md:w-1/2 mt-6 md:mt-0">
+                    <div class="chart-container" style="height: 300px; max-height: 300px;">
+                        <canvas id="valuePropositionChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-brand-blue text-white text-center p-8 mt-8">
+        <h2 class="text-3xl font-bold">¿Listo para recuperar su tranquilidad?</h2>
+        <p class="mt-2 mb-4 max-w-2xl mx-auto">Permítanos mostrarle la diferencia de Vista Ridge. Contáctenos hoy para una inspección de daños gratuita y sin compromiso.</p>
+        <a href="#" class="bg-brand-gold text-brand-blue font-bold py-3 px-8 rounded-lg hover:bg-yellow-300 transition-colors">¡Agendar mi Inspección Gratuita!</a>
+        <div class="mt-6 text-yellow-200/70">
+            <p>[Su Número de Teléfono] | [Su Correo Electrónico] | [Su Página Web]</p>
+        </div>
+    </footer>
+
+    <script>
+        const tooltipTitleCallback = function(tooltipItems) {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            } else {
+                return label;
+            }
+        };
+
+        const wrapLabel = (label) => {
+            const maxLength = 16;
+            if (label.length <= maxLength) return label;
+            
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            
+            words.forEach(word => {
+                if ((currentLine + word).length > maxLength) {
+                    lines.push(currentLine.trim());
+                    currentLine = '';
+                }
+                currentLine += word + ' ';
+            });
+            lines.push(currentLine.trim());
+            return lines;
+        };
+        
+        const topStatesCtx = document.getElementById('topStatesChart').getContext('2d');
+        const topStatesChart = new Chart(topStatesCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Texas', 'Colorado', 'Nebraska', 'Minnesota', 'Oklahoma'],
+                datasets: [{
+                    label: 'Reclamaciones por Granizo',
+                    data: [1100, 850, 700, 650, 600],
+                    backgroundColor: ['#024497', '#97b355', '#ffd98d', '#a8c56c', '#fce3a4'],
+                    borderColor: '#ffffff',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                indexAxis: 'y',
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    title: {
+                        display: true,
+                        text: 'Top 5 Estados por Reclamaciones de Granizo (miles)',
+                        font: { size: 16 },
+                        color: '#333'
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        const valuePropCtx = document.getElementById('valuePropositionChart').getContext('2d');
+        const valuePropositionChart = new Chart(valuePropCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Gestión del Reclamo', 'Supervisión de Reparación', 'Búsqueda de Contratista', 'Negociación con Ajustador'],
+                datasets: [{
+                    data: [40, 30, 15, 15],
+                    backgroundColor: ['#024497', '#97b355', '#ffd98d', '#6a823a'],
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Donde Invertimos Nuestro Tiempo Por Usted',
+                        font: { size: 16 },
+                        color: '#333'
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
